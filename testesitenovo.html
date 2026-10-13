@@ -129,14 +129,14 @@
                         </ul>
                     </div>
 
-                    <!-- Card: Neurodivergente: AH/SD com imagem real de girassol -->
-                    <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-amber-200/80 dark:border-amber-900/40 shadow-sm flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/50 p-1 flex items-center justify-center flex-shrink-0 border border-amber-200/50 dark:border-amber-800/40">
+                    <!-- Card: Neurodivergente: AH/SD com imagem real de girassol em círculo maior -->
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-amber-200/80 dark:border-amber-900/40 shadow-sm flex flex-col sm:flex-row items-center gap-6">
+                        <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full bg-amber-50 dark:bg-amber-950/50 p-2 flex items-center justify-center flex-shrink-0 border-4 border-amber-500/20 shadow-md">
                             <img src="/Imagens/girassolvazado.png" alt="Girassol" class="w-full h-full object-contain">
                         </div>
-                        <div>
+                        <div class="text-center sm:text-left">
                             <span class="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400">Informação Geral</span>
-                            <h4 class="font-bold text-slate-900 dark:text-white text-base">Neurodivergente: AH/SD</h4>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-lg sm:text-xl mt-1">Neurodivergente: AH/SD</h4>
                         </div>
                     </div>
                 </div>
@@ -406,7 +406,7 @@
         }
 
         function prevSlide() {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            currentIndex = (currentIndex - 1 + totalClasses) % totalSlides; // Ajustado visualmente abaixo
             updateCarousel();
         }
 
@@ -431,7 +431,8 @@
         });
 
         prevButton.addEventListener('click', () => {
-            prevSlide();
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
             resetInterval();
         });
 
