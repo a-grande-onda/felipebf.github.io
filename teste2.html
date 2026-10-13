@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Brasil Felicio</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-200">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                Felipe Brasil Felicio
+            </a>
+            <button id="theme-toggle" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" title="Alternar tema">
+                <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                <i class="fa-solid fa-sun hidden dark:inline text-lg text-amber-400"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-12">
+
+        <!-- Perfil Hero Section -->
+        <section class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/60">
+            <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+                <!-- Avatar Circular -->
+                <div class="relative flex-shrink-0">
+                    <img src="avatarsemfundo.png" alt="Felipe Brasil Felicio" class="w-32 h-32 sm:w-36 sm:h-36 rounded-full object-cover ring-4 ring-emerald-500/20 bg-slate-100 dark:bg-slate-700 shadow-md">
+                </div>
+                
+                <div class="space-y-3 text-center sm:text-left flex-1">
+                    <div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Felipe Brasil Felicio</h1>
+                        <p class="text-emerald-600 dark:text-emerald-400 font-semibold mt-1">Professor e Pedagogo • 38 anos</p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 justify-center sm:justify-start pt-1">
+                        <a href="https://www.google.com/maps/@-25.8261996,-48.5469243,13.79z?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">
+                            <i class="fa-solid fa-location-dot text-emerald-500"></i>
+                            Matinhos - PR, Brasil
+                        </a>
+                        <a href="mailto:felipefelicio@gmail.com" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">
+                            <i class="fa-solid fa-envelope text-emerald-500"></i>
+                            felipefelicio@gmail.com
+                        </a>
+                        <a href="https://wa.me/5541998816816" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 transition-colors">
+                            <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+                            @felipebrasilfelicio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Currículo Section -->
+        <section class="space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                    <i class="fa-solid fa-graduation-cap text-emerald-500"></i> Formação & Currículo
+                </h2>
+                <a href="curriculo26042026.pdf" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-sm font-semibold shadow-sm transition-all hover:shadow hover:-translate-y-0.5">
+                    <i class="fa-solid fa-file-pdf"></i> Baixar CV Completo (PDF)
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                <!-- Coluna Esquerda: Bacharelados + Card Neurodivergente -->
+                <div class="space-y-6">
+                    <!-- Bacharelados e Licenciaturas -->
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm">
+                        <div class="flex items-center gap-3 mb-4 text-emerald-600 dark:text-emerald-400">
+                            <i class="fa-solid fa-book-open text-lg"></i>
+                            <h3 class="font-bold text-slate-900 dark:text-white">Bacharelados e Licenciaturas</h3>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2.5 text-sm text-slate-600 dark:text-slate-300">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Geologia
+                            </li>
+                            <li class="flex items-center gap-2.5 text-sm text-slate-600 dark:text-slate-300">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Ciências
+                            </li>
+                            <li class="flex items-center gap-2.5 text-sm text-slate-600 dark:text-slate-300">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Ciências Biológicas
+                            </li>
+                            <li class="flex items-center gap-2.5 text-sm text-slate-600 dark:text-slate-300">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Geografia
+                            </li>
+                            <li class="flex items-center gap-2.5 text-sm text-slate-600 dark:text-slate-300">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Pedagogia
+                            </li>
+                            <li class="flex items-center gap-2.5 text-sm text-slate-500 dark:text-slate-400 italic">
+                                <span class="w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-500"></span> Ciências exatas (planejado)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card: Neurodivergente: AH/SD -->
+                    <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-amber-200/80 dark:border-amber-900/40 shadow-sm flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/50 p-1 flex items-center justify-center flex-shrink-0 border border-amber-200/50 dark:border-amber-800/40">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sunflower_sky_backdrop.svg" alt="Girassol" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400">Informação Geral</span>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-base">Neurodivergente: AH/SD</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Pós-Graduações -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4 text-emerald-600 dark:text-emerald-400">
+                        <i class="fa-solid fa-award text-lg"></i>
+                        <h3 class="font-bold text-slate-900 dark:text-white">Pós-Graduações</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="p-3 bg-slate-50 dark:bg-slate-700/40 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 border border-slate-100 dark:border-slate-700">
+                            Educação Especial e Inclusão
+                        </li>
+                        <li class="p-3 bg-slate-50 dark:bg-slate-700/40 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 border border-slate-100 dark:border-slate-700">
+                            Gestão Escolar
+                        </li>
+                        <li class="p-3 bg-emerald-50/60 dark:bg-emerald-950/20 rounded-xl text-sm font-medium text-slate-800 dark:text-slate-100 border border-emerald-200/70 dark:border-emerald-800/50 flex items-center justify-between gap-2">
+                            <span>Neuropsicopedagogia Institucional</span>
+                            <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 flex-shrink-0">Em andamento</span>
+                        </li>
+                        <li class="p-3 bg-emerald-50/60 dark:bg-emerald-950/20 rounded-xl text-sm font-medium text-slate-800 dark:text-slate-100 border border-emerald-200/70 dark:border-emerald-800/50 flex items-center justify-between gap-2">
+                            <span>Transtorno do Espectro Autista: Inclusão Escolar e Social</span>
+                            <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 flex-shrink-0">Em andamento</span>
+                        </li>
+                        <li class="p-3 bg-emerald-50/60 dark:bg-emerald-950/20 rounded-xl text-sm font-medium text-slate-800 dark:text-slate-100 border border-emerald-200/70 dark:border-emerald-800/50 flex items-center justify-between gap-2">
+                            <span>Alfabetização e Letramento</span>
+                            <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 flex-shrink-0">Em andamento</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrossel de Imagens -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                    <i class="fa-solid fa-images text-emerald-500"></i> Galeria de Fotos
+                </h2>
+            </div>
+
+            <div class="relative w-full overflow-hidden rounded-3xl bg-slate-900 border border-slate-200/80 dark:border-slate-700/60 shadow-sm">
+                <!-- Trilha de Imagens (7 imagens) -->
+                <div class="flex transition-transform duration-500 ease-in-out w-full" id="carouselTrack">
+                    <div class="min-w-full"><img src="https://picsum.photos/id/1015/800/420" alt="Foto 1 do Carrossel" class="w-full h-72 sm:h-96 object-cover block"></div>
+                    <div class="min-w-full"><img src="https://picsum.photos/id/1016/800/420" alt="Foto 2 do Carrossel" class="w-full h-72 sm:h-96 object-cover block"></div>
+                    <div class="min-w-full"><img src="https://picsum.photos/id/1018/800/420" alt="Foto 3 do Carrossel" class="w-full h-72 sm:h-96 object-cover block"></div>
+                    <div class="min-w-full"><img src="https://picsum.photos/id/1020/800/420" alt="Foto 4 do Carrossel" class="w-full h-72 sm:h-96 object-cover block"></div>
+                    <div class="min-w-full"><img src="https://picsum.photos/id/1024/800/420" alt="Foto 5 do Carrossel" class="w-full h-72 sm:h-96 object-cover block"></div>
+                    <div class="min-w-full"><img src="https://picsum.photos/id/1025/800/420" alt="Foto 6 do Carrossel" class="w-full h-72 sm:h-96 object-cover block"></div>
+                    <div class="min-w-full"><img src="https://picsum.photos/id/1035/800/420" alt="Foto 7 do Carrossel" class="w-full h-72 sm:h-96 object-cover block"></div>
+                </div>
+
+                <!-- Botões de Navegação Manual (Setas) -->
+                <button id="prevBtn" aria-label="Anterior" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center transition-colors z-10 cursor-pointer">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button id="nextBtn" aria-label="Próximo" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center transition-colors z-10 cursor-pointer">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <!-- Indicadores (Bolinhas) -->
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10" id="indicatorsContainer"></div>
+            </div>
+        </section>
+
+        <!-- Seção: Hobbies -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                    <i class="fa-solid fa-heart text-emerald-500"></i> Hobbies
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                <!-- Card Escrita -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200/80 dark:border-slate-700/60 shadow-sm text-center flex flex-col items-center hover:-translate-y-1 transition-all">
+                    <div class="w-20 h-20 mb-3 rounded-xl overflow-hidden bg-slate-900 flex items-center justify-center">
+                        <img src="hobby_escrita.jpg" alt="Escrita" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Escrita</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Redação de ensaios, troca de correspondências e cartas pessoais.</p>
+                </div>
+
+                <!-- Card Leitura -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200/80 dark:border-slate-700/60 shadow-sm text-center flex flex-col items-center hover:-translate-y-1 transition-all">
+                    <div class="w-20 h-20 mb-3 rounded-xl overflow-hidden bg-slate-900 flex items-center justify-center">
+                        <img src="hobby_leitura.jpg" alt="Leitura" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Leitura</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Exploração contínua de clássicos, não ficção e filosofia.</p>
+                </div>
+
+                <!-- Card Música -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200/80 dark:border-slate-700/60 shadow-sm text-center flex flex-col items-center hover:-translate-y-1 transition-all">
+                    <div class="w-20 h-20 mb-3 rounded-xl overflow-hidden bg-slate-900 flex items-center justify-center">
+                        <img src="hobby_musica.jpg" alt="Música" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Música</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Apreciação de álbuns de MPB, J-Pop, Indie Rock e novos gêneros.</p>
+                </div>
+
+                <!-- Card Jogos -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200/80 dark:border-slate-700/60 shadow-sm text-center flex flex-col items-center hover:-translate-y-1 transition-all">
+                    <div class="w-20 h-20 mb-3 rounded-xl overflow-hidden bg-slate-900 flex items-center justify-center">
+                        <img src="hobby_jogos.jpg" alt="Jogos" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Jogos</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Apreço por jogos clássicos, de plataforma 2D e puzzles.</p>
+                </div>
+
+                <!-- Card Xadrez -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200/80 dark:border-slate-700/60 shadow-sm text-center flex flex-col items-center col-span-2 sm:col-span-1 hover:-translate-y-1 transition-all">
+                    <div class="w-20 h-20 mb-3 rounded-xl overflow-hidden bg-slate-900 flex items-center justify-center">
+                        <img src="hobby_xadrez.jpg" alt="Xadrez" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Xadrez</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Partidas casuais e análise de táticas para exercício mental.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Redes / Encontre-me em... -->
+        <section class="space-y-6">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-4 flex items-center gap-3">
+                <i class="fa-solid fa-globe text-emerald-500"></i> Encontre-me em...
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Blog com Favicon -->
+                <a href="https://www.a-grande-onda.blog.br" target="_blank" class="flex items-center p-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-emerald-500 dark:hover:border-emerald-500 transition-all hover:-translate-y-1 shadow-sm group">
+                    <div class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-700 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform overflow-hidden p-2">
+                        <img src="https://a-grande-onda.github.io/Imagens/favicon.png" alt="Favicon A Grande Onda" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Blog</div>
+                        <div class="font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400">A Grande Onda</div>
+                    </div>
+                </a>
+
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/@felipe.b.felicio" target="_blank" class="flex items-center p-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-emerald-500 dark:hover:border-emerald-500 transition-all hover:-translate-y-1 shadow-sm group">
+                    <div class="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 flex items-center justify-center text-xl mr-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">YouTube</div>
+                        <div class="font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400">@felipe.b.felicio</div>
+                    </div>
+                </a>
+
+                <!-- Lichess -->
+                <a href="https://lichess.org/@/Prof_FelipeBrasil" target="_blank" class="flex items-center p-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-emerald-500 dark:hover:border-emerald-500 transition-all hover:-translate-y-1 shadow-sm group">
+                    <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mr-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chess"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Lichess</div>
+                        <div class="font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400">Prof_FelipeBrasil</div>
+                    </div>
+                </a>
+
+                <!-- Steam -->
+                <a href="https://steamcommunity.com/id/felipebf/" target="_blank" class="flex items-center p-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-emerald-500 dark:hover:border-emerald-500 transition-all hover:-translate-y-1 shadow-sm group">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl mr-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-steam"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Steam</div>
+                        <div class="font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400">felipebf</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Jardim Digital -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                    <i class="fa-solid fa-seedling text-emerald-500"></i> Jardim Digital
+                </h2>
+            </div>
+
+            <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 shadow-sm flex flex-col md:flex-row">
+                <!-- Imagem do Jardim Digital -->
+                <div class="md:w-5/12 relative group bg-slate-100 dark:bg-slate-900 flex items-center justify-center overflow-hidden min-h-[220px]">
+                    <a href="jardimdigitalcapa.jpeg" target="_blank" class="w-full h-full flex items-center justify-center">
+                        <img src="jardimdigitalcapa.jpeg" alt="Capa do Jardim Digital" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-sm font-semibold gap-2">
+                            <i class="fa-solid fa-expand"></i> Ampliar capa
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Tópicos do Jardim Digital -->
+                <div class="p-6 md:p-8 md:w-7/12 flex flex-col justify-between">
+                    <div>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+                            Coleção contínua de notas, aprendizados e reflexões em constante cultivo:
+                        </p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Crescimento do outro
+                            </a>
+                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Utilitarismo sinusóide
+                            </a>
+                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Regras e simulações
+                            </a>
+                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Mãos transmitem ideias
+                            </a>
+                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Aprendizados pessoais
+                            </a>
+                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Músculos e Ossos
+                            </a>
+                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Rotina de trabalho
+                            </a>
+                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Quem sou eu afinal?
+                            </a>
+                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Lembranças relevantes
+                            </a>
+                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Manifestações artísticas
+                            </a>
+                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2 sm:col-span-2">
+                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Achei interessante
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-8 mt-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center text-sm text-slate-500 dark:text-slate-400">
+            <p>© 2026 Felipe Brasil Felicio. <span class="text-emerald-600 dark:text-emerald-400 font-medium">Copie mas Cite.</span></p>
+        </div>
+    </footer>
+
+    <!-- Script Modo Claro/Escuro -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+    </script>
+
+    <!-- Script do Carrossel de Imagens -->
+    <script>
+        const track = document.getElementById('carouselTrack');
+        const slides = Array.from(track.children);
+        const nextButton = document.getElementById('nextBtn');
+        const prevButton = document.getElementById('prevBtn');
+        const indicatorsContainer = document.getElementById('indicatorsContainer');
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        let slideInterval;
+
+        // Criar as bolinhas indicadoras dinamicamente
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('w-3', 'h-3', 'rounded-full', 'transition-all', 'cursor-pointer');
+            if (index === 0) {
+                dot.classList.add('bg-white', 'scale-125');
+            } else {
+                dot.classList.add('bg-white/50', 'hover:bg-white/80');
+            }
+            dot.setAttribute('aria-label', `Ir para slide ${index + 1}`);
+            
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                resetInterval();
+            });
+            indicatorsContainer.appendChild(dot);
+        });
+
+        const indicators = Array.from(indicatorsContainer.children);
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            indicators.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.className = 'w-3 h-3 rounded-full transition-all cursor-pointer bg-white scale-125';
+                } else {
+                    dot.className = 'w-3 h-3 rounded-full transition-all cursor-pointer bg-white/50 hover:bg-white/80';
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        // Autoplay a cada 5 segundos (5000ms)
+        function startInterval() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            startInterval();
+        }
+
+        nextButton.addEventListener('click', () => {
+            nextSlide();
+            resetInterval();
+        });
+
+        prevButton.addEventListener('click', () => {
+            prevSlide();
+            resetInterval();
+        });
+
+        // Iniciar rotação automática
+        startInterval();
+    </script>
+</body>
+</html>
