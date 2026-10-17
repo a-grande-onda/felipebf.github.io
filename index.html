@@ -55,25 +55,23 @@
 
     <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-12">
 
-        <!-- Perfil Hero Section (Com o selo AH/SD incorporado) -->
+        <!-- Perfil Hero Section -->
         <section class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/60">
             <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
-                <!-- Avatar Circular -->
+                <!-- Avatar Circular com Selo AH/SD Sobreposto -->
                 <div class="relative flex-shrink-0">
                     <img src="avatarsemfundo.png" alt="Felipe Brasil Felicio" class="w-32 h-32 sm:w-36 sm:h-36 rounded-full object-cover ring-4 ring-emerald-500/20 bg-slate-100 dark:bg-slate-700 shadow-md">
+                    
+                    <!-- Selo AH/SD (Posicionado no canto inferior direito do avatar) -->
+                    <div class="absolute -bottom-1 -right-1 z-10 inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-50 dark:bg-slate-900 border border-amber-300 dark:border-amber-700/60 rounded-full shadow-md">
+                        <img src="Imagens/neurodiversidade.webp" alt="Girassol" class="w-4 h-4 object-contain">
+                        <span class="text-[11px] font-bold text-amber-800 dark:text-amber-300 tracking-wide">AH/SD</span>
+                    </div>
                 </div>
                 
                 <div class="space-y-3 text-center sm:text-left flex-1">
                     <div>
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                            <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Felipe Brasil Felicio</h1>
-                            
-                            <!-- Selo AH/SD incorporado -->
-                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/50 rounded-full self-center sm:self-auto shadow-sm">
-                                <img src="Imagens/neurodiversidade.webp" alt="Girassol" class="w-5 h-5 object-contain">
-                                <span class="text-xs font-bold text-amber-700 dark:text-amber-300">AH/SD</span>
-                            </div>
-                        </div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Felipe Brasil Felicio</h1>
                         <p class="text-emerald-600 dark:text-emerald-400 font-semibold mt-1">Professor e Pedagogo • 38 anos</p>
                     </div>
 
@@ -189,7 +187,7 @@
             </div>
         </section>
 
-        <!-- Carrossel de Imagens (Corrigido) -->
+        <!-- Carrossel de Imagens -->
         <section class="space-y-6">
             <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
                 <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
@@ -385,18 +383,6 @@
                             <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
                                 <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Rotina de trabalho
                             </a>
-                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
-                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Quem sou eu afinal?
-                            </a>
-                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
-                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Lembranças relevantes
-                            </a>
-                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2">
-                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Manifestações artísticas
-                            </a>
-                            <a href="#" class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-700/40 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 text-xs font-semibold transition-colors flex items-center gap-2 sm:col-span-2">
-                                <i class="fa-solid fa-leaf text-emerald-500 text-[10px]"></i> Achei interessante
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -404,103 +390,5 @@
         </section>
 
     </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-8 mt-12">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center text-sm text-slate-500 dark:text-slate-400">
-            <p>© 2026 Felipe Brasil Felicio. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript para Lógica do Carrossel e Tema Escuro -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // --- Alternar Tema Claro / Escuro ---
-            const themeToggleBtn = document.getElementById('theme-toggle');
-            themeToggleBtn.addEventListener('click', () => {
-                document.documentElement.classList.toggle('dark');
-            });
-
-            // --- Lógica do Carrossel ---
-            const track = document.getElementById('carouselTrack');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const indicatorsContainer = document.getElementById('indicatorsContainer');
-
-            if (!track) return;
-
-            const slides = Array.from(track.children);
-            const totalSlides = slides.length;
-            let currentIndex = 0;
-            let autoplayTimer = null;
-
-            // Criar os indicadores (bolinhas) dinamicamente
-            slides.forEach((_, index) => {
-                const dot = document.createElement('button');
-                dot.ariaLabel = `Ir para imagem ${index + 1}`;
-                dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                    index === 0 ? 'bg-white w-6' : 'bg-white/50 hover:bg-white/80'
-                }`;
-                dot.addEventListener('click', () => {
-                    goToSlide(index);
-                    resetAutoplay();
-                });
-                indicatorsContainer.appendChild(dot);
-            });
-
-            const indicators = Array.from(indicatorsContainer.children);
-
-            function updateCarousel() {
-                // Desloca o carrossel no eixo X de acordo com a imagem atual
-                track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-                // Atualiza o estado visual dos indicadores
-                indicators.forEach((dot, index) => {
-                    if (index === currentIndex) {
-                        dot.className = 'w-6 h-2.5 rounded-full bg-white transition-all duration-300 cursor-pointer';
-                    } else {
-                        dot.className = 'w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300 cursor-pointer';
-                    }
-                });
-            }
-
-            function goToSlide(index) {
-                currentIndex = (index + totalSlides) % totalSlides;
-                updateCarousel();
-            }
-
-            function nextSlide() {
-                goToSlide(currentIndex + 1);
-            }
-
-            function prevSlide() {
-                goToSlide(currentIndex - 1);
-            }
-
-            // Eventos dos botões de seta
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                resetAutoplay();
-            });
-
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                resetAutoplay();
-            });
-
-            // Rolagem automática a cada 5 segundos
-            function startAutoplay() {
-                autoplayTimer = setInterval(nextSlide, 5000);
-            }
-
-            function resetAutoplay() {
-                clearInterval(autoplayTimer);
-                startAutoplay();
-            }
-
-            // Inicia o carrossel automático
-            startAutoplay();
-        });
-    </script>
 </body>
 </html>
