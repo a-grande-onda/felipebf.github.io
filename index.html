@@ -203,7 +203,7 @@
                 </h2>
             </div>
 
-            <div class="relative w-full aspect-[4/3] overflow-hidden rounded-3xl bg-slate-900 border border-slate-200/80 dark:border-slate-700/60 shadow-sm group">
+            <div id="carouselContainer" class="relative w-full aspect-[4/3] overflow-hidden rounded-3xl bg-slate-900 border border-slate-200/80 dark:border-slate-700/60 shadow-sm group">
                 <!-- Trilha de Imagens -->
                 <div class="flex transition-transform duration-500 ease-in-out w-full h-full" id="carouselTrack">
                     <div class="w-full h-full flex-shrink-0"><img src="Imagens/carrossel01.jpg" alt="Foto 1 do Carrossel" class="w-full h-full object-cover block"></div>
@@ -426,18 +426,20 @@
             }
         });
 
-        // 2. Script do Carrossel de Imagens
+        // 2. Script do Carrossel de Imagens (Com autoplay a cada 5 segundos)
         document.addEventListener('DOMContentLoaded', function () {
             const track = document.getElementById('carouselTrack');
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             const indicatorsContainer = document.getElementById('indicatorsContainer');
+            const carouselContainer = document.getElementById('carouselContainer');
             
             if (!track) return;
             
             const slides = Array.from(track.children);
             const totalSlides = slides.length;
             let currentIndex = 0;
+            let slideInterval;
 
             // Criar dinamicamente os indicadores (bolinhas)
             slides.forEach((_, index) => {
@@ -446,7 +448,10 @@
                 dot.className = `w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
                     index === 0 ? 'bg-white w-6' : 'bg-white/50 hover:bg-white/80'
                 }`;
-                dot.addEventListener('click', () => goToSlide(index));
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                    resetTimer();
+                });
                 indicatorsContainer.appendChild(dot);
             });
 
@@ -475,9 +480,47 @@
                 });
             }
 
-            // Eventos dos botões de seta
-            prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
-            nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+            // Funções de navegação manual
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetTimer();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetTimer();
+            });
+
+            // Configurar Autoplay (5 segundos)
+            function startTimer() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            function resetTimer() {
+                clearInterval(slideInterval);
+                startTimer();
+            }
+
+            // Pausar autoplay quando o mouse estiver em cima do carrossel
+            carouselContainer.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+
+            // Retomar autoplay quando o mouse sair
+            carouselContainer.addEventListener('mouseleave', () => {
+                startTimer();
+            });
+
+            // Iniciar o temporizador
+            startTimer();
         });
     </script>
 </body>
