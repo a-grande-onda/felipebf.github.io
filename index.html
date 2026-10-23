@@ -381,5 +381,103 @@
         </div>
     </footer>
 
+    <!-- Scripts de Funcionalidades (Tema Dark/Light e Carrossel) -->
+    <script>
+        // --- 1. Alternador de Tema Dark/Light ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // --- 2. Lógica do Carrossel com Intervalo de 5 Segundos ---
+        const track = document.getElementById('carouselTrack');
+        const slides = Array.from(track.children);
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicatorsContainer = document.getElementById('indicatorsContainer');
+        const container = document.getElementById('carouselContainer');
+
+        let currentIndex = 0;
+        let slideInterval;
+        const INTERVAL_TIME = 5000; // 5 segundos
+
+        // Cria os indicadores (bolinhas) dinamicamente
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('w-2.5', 'h-2.5', 'rounded-full', 'transition-all', 'duration-300', 'cursor-pointer');
+            if (index === 0) {
+                dot.classList.add('bg-white', 'w-6');
+            } else {
+                dot.classList.add('bg-white/50', 'hover:bg-white/80');
+            }
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                resetAutoplay();
+            });
+            indicatorsContainer.appendChild(dot);
+        });
+
+        const dots = Array.from(indicatorsContainer.children);
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.className = 'w-6 h-2.5 rounded-full bg-white transition-all duration-300 cursor-pointer';
+                } else {
+                    dot.className = 'w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300 cursor-pointer';
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarousel();
+        }
+
+        // Eventos dos botões
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoplay();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoplay();
+        });
+
+        // Autoplay (5 segundos)
+        function startAutoplay() {
+            slideInterval = setInterval(nextSlide, INTERVAL_TIME);
+        }
+
+        function resetAutoplay() {
+            clearInterval(slideInterval);
+            startAutoplay();
+        }
+
+        // Pausa no hover para facilitar visualização
+        container.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        container.addEventListener('mouseleave', () => startAutoplay());
+
+        // Inicializar
+        startAutoplay();
+    </script>
 </body>
 </html>
