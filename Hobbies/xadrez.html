@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xadrez — Felipe Brasil Felicio</title>
+
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K6NPWZF5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Script para verificar a preferência salva antes da página carregar (evita FOUC) -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="/felipebf.github.io/" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                Felipe Brasil Felicio
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="/felipebf.github.io/" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <i class="fa-solid fa-arrow-left text-emerald-500"></i>
+                    <span class="hidden sm:inline">Início</span>
+                </a>
+                <button id="theme-toggle" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" title="Alternar tema">
+                    <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-solid fa-sun hidden dark:inline text-lg text-amber-400"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal do Post -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 w-full">
+        <article class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-10 md:p-12 shadow-sm border border-slate-200/80 dark:border-slate-700/60">
+            
+            <!-- Cabeçalho do Artigo -->
+            <header class="border-b border-slate-200 dark:border-slate-700/80 pb-6 mb-8 space-y-4">
+                <div class="flex flex-wrap items-center gap-3 text-xs font-medium">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-800/50">
+                        <i class="fa-solid fa-chess text-emerald-500"></i> Hobbies
+                    </span>
+                    <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-regular fa-calendar"></i> 26 de Novembro de 2026
+                    </span>
+                    <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-regular fa-clock"></i> ~2 min de leitura
+                    </span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                    Xadrez
+                </h1>
+            </header>
+
+            <!-- Corpo do Texto -->
+            <div class="space-y-6 text-base sm:text-[17px] leading-relaxed text-slate-700 dark:text-slate-300">
+                <p>
+                    Xadrez é um jogo que realmente me interesso. Jogo online no lichess desde 2018, e antes joguei online no ICC por volta de 2001. Joguei presencial quando criança e dos 10 aos 14 anos até ganhei alguns campeonatos regionais e interescolares. Cheguei a viajar para outros estados para jogar. Abandonei o competitivo aos 14 anos e só retornei a jogar novamente aos 30 anos de idade.
+                </p>
+
+                <p>
+                    Hoje jogo de 2 a 5 partidas por dia, praticamente todos os dias no lichess.org. É um hábito bem estruturado que mantenho pelos últimos 9 anos. Jogo focado ou assistindo vídeos do youtube em paralelo.
+                </p>
+
+                <p>
+                    Top 10% é a minha posição no website. Entre 10 jogadores do site eu tenho condições de ganhar de 9 deles. É bastante? É pouco? Não sei. Meu sonho é conseguir chegar no top 1% do website em que jogo. Para isso estudo é necessário, e sou muito preguiçoso. Seria um foco absurdo em um jogo só para ser bom nele, sem nenhum benefício extra na ”vida real”.
+                </p>
+
+                <p>
+                    Com um rating acima de 2300 eu ficaria bem satisfeito, hoje fico entre 1900 e 2100.Cada partida soma 4 a 7 pontos, e cada derrota faz você perder o mesmo. Ou seja, há de se vencer muito mais que ser derrotado para subir sua pontuação no site. E quanto mais alta sua pontuação, mais vezes você encara pessoas mais fortes, dificultando esta progressão.
+                </p>
+
+                <p>
+                    Xadrez é legal, aprendi muito sobre antecipação e estratégia com este jogo, habilidades que uso em outras áreas da vida. Nos demais pontos, xadrez é só um jogo, para mim está longe de ser um estilo de vida. É um hobby que gosto e que gasto de 30 minutos a 1 hora todo dia. E acho que é um tempo bem gasto.
+                </p>
+
+                <p>
+                    O competitivo e o presencial não me interessam muito. Às vezes jogo alguns torneios online, mas nunca cheguei ao pódio no website lichess. É muito difícil ser melhor que 100 ou 200 pessoas jogando digitalmente em um torneio, admiro quem consegue.
+                </p>
+
+                <p>
+                    <a href="https://lichess.org/@/Prof_FelipeBrasil" target="_blank" class="text-emerald-600 dark:text-emerald-400 underline hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors">Este é meu perfil no site em que jogo, clique para acompanhar.</a>
+                </p>
+            </div>
+
+            <!-- Rodapé do Post / Autor -->
+            <footer class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <img src="avatarsemfundo.png" alt="Felipe Brasil Felicio" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/30 bg-slate-100 dark:bg-slate-700">
+                    <div>
+                        <p class="text-sm font-bold text-slate-900 dark:text-white">Felipe Brasil Felicio</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Professor e Pedagogo • Matinhos - PR</p>
+                    </div>
+                </div>
+
+                <a href="/felipebf.github.io/" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold bg-slate-100 dark:bg-slate-700/60 text-slate-700 dark:text-slate-200 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-600 transition-colors">
+                    <i class="fa-solid fa-house text-xs"></i> Voltar para a página inicial
+                </a>
+            </footer>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 mt-12 border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center text-sm text-slate-500 dark:text-slate-400">
+            © 2026 Felipe Brasil Felicio. Copie mas Cite.
+        </div>
+    </footer>
+
+    <!-- Script Alternador de Tema Dark/Light -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
