@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos — Felipe Brasil Felicio</title>
+
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K6NPWZF5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Script para verificar a preferência salva antes da página carregar (evita FOUC) -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                Felipe Brasil Felicio
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <i class="fa-solid fa-arrow-left text-emerald-500"></i>
+                    <span class="hidden sm:inline">Início</span>
+                </a>
+                <button id="theme-toggle" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" title="Alternar tema">
+                    <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-solid fa-sun hidden dark:inline text-lg text-amber-400"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal do Post -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 w-full">
+        <article class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-10 md:p-12 shadow-sm border border-slate-200/80 dark:border-slate-700/60">
+            
+            <!-- Cabeçalho do Artigo -->
+            <header class="border-b border-slate-200 dark:border-slate-700/80 pb-6 mb-8 space-y-4">
+                <div class="flex flex-wrap items-center gap-3 text-xs font-medium">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-800/50">
+                        <i class="fa-solid fa-gamepad text-emerald-500"></i> Hobbies
+                    </span>
+                    <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-regular fa-calendar"></i> 26 de Novembro de 2026
+                    </span>
+                    <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-regular fa-clock"></i> ~4 min de leitura
+                    </span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                    Jogos
+                </h1>
+            </header>
+
+            <!-- Corpo do Texto -->
+            <div class="space-y-6 text-base sm:text-[17px] leading-relaxed text-slate-700 dark:text-slate-300">
+                <p>
+                    Tive minha primeira experiência com jogos aos 4 anos de idade, o Atari 2600, caixa de madeira joystick com manete. Foi legal mesmo não compreendendo muito e jogando só pitfall, river raid e enduro.
+                </p>
+
+                <p>
+                    No ano seguinte meu pai deu um nintendinho para minha mãe, um HI-TOP-GAME, famiclone, e em 1993 tive a oportunidade de jogar o maior jogo da geração, Mario 3. Costumo dizer que este jogo foi uma virada de chave que me incentivou no hobby de games por toda minha vida. Joguei mais jogos na época em cartuchos chineses duvidosos. Foi uma boa época, que durou até 1995.
+                </p>
+
+                <p>
+                    Em 1995 no Natal ganhei um Super Nintendo. Agora sim, estou na geração atual. Joguei muita coisa na época e tive 7 fitas (ou cartuchos, como preferir), dos que me lembro: Jurassic Park 2, Ultimate Mortal Kombat 3, Donkey Kong Country 1, 2 e 3, Yoshi´s Island e The Mask. Jogava esses jogos continuamente, e também emprestava cartuchos na locadora de VHS para jogar no final de semana. E amigos de escola e da rua, tive acesso a mais de 50 jogos nesta época do Super Nintendo.
+                </p>
+
+                <p>
+                    Em 1998 tive acesso a emulação, primeiramente a de Game Boy no computador, joguei os Pokémons de game boy por um bom tempo. Depois por volta do ano 2000 tive acesso a emulação de Super Nintendo e aí conheci centenas de jogos novos baixando pela internet.
+                </p>
+
+                <p>
+                    Em 1993 tive um computador 486, tive alguns jogos de DOS nele, em 1996 tive um Pentium 166Mhz com windows 95, neste joguei muitos jogos, principalmente RTS e FPS dos anos 90, também rodava alguns jogos que eram do Playstation como a trilogia Tomb Raider original. Os marcos desta época foram a franquia Command and Conquer, Starcraft, Commandos e Age of Empires.
+                </p>
+
+                <p>
+                    Em 2003 ganhei a atualização do meu computador, desta vez um Pentium 4 com a fx5200, uma placa de entrada mas que rodava jogos de qualidade PS2. Joguei alguns jogos da época como Beyond Good and Evil, a trilogia Prince of Persia, NFS Underground e GTA Vice City.
+                </p>
+
+                <p>
+                    E em 2006 comprei meu primeiro console com minhas economias. Um Nintendo DS Lite. Nesta época frequentava um fórum de games e realmente mergulhei no hobby podendo conversar com pessoas que tinham muito mais experiência com games que eu. O NDS foi comprado com um flashcard que permitia baixar os jogos online e jogar no console original. Joguei centenas de jogos nessa época.
+                </p>
+
+                <p>
+                    Em 2012 peguei um 3DS, depois vendi, comprei novamente, vendi… não conseguia manter ele com originais. Acabei comprando novamente em 2019 com total desbloqueio, assim ficou bem mais fácil jogar os jogos do console. Hoje ainda jogo jogos nele, em especial os RPGs da ATLUS, SQUARE ENIX e os jogos da Nintendo.
+                </p>
+
+                <p>
+                    Em 2010 regularizei meu hobby no computador. Com as facilidades da Steam poderia comprar jogos a bons preços e montar uma biblioteca legítima sem apelar para pirataria. E fiz isso… entre 2010 e 2026 gastei cerca de 80 a 90 reais mensais e comprei 600 jogos. Joguei 250 aproximadamente neste período, ou seja, tenho uma reserva (backlog) para mais uns 30 anos, sem problema algum. Não necessito comprar mais nada hoje. No futuro farei um apanhado e selecionarei mais jogos para a coleção, mas o objetivo agora é jogar ou ao menos testar tudo que tenho na conta Steam.
+                </p>
+
+                <p>
+                    Uma lista dos top 100 jogos da minha infância e adolescência pode ser vista aqui em um post em meu blog.
+                </p>
+
+                <p>
+                    Hoje jogo pouco, menos de 5 horas semanais. Quando muito, 10 horas. Não é mais meu hobby principal agora em 2027. Mas é um hobby que gostei de ter e que acredito ser muito interessante. Entre outros benefícios, videogames auxilia na fluência de línguas estrangeiras, interações online e também é uma válvula de escape para a realidade moderna.
+                </p>
+
+                <p>
+                    Gosto de em poucas horas conseguir alcançar objetivos dentro do jogo, seguir uma história, desenvolver e evoluir um personagem ou uma cidade (em alguns jogos). Acredito que os jogos de simulação são extremamente importantes e mesmo os jogos de puzzle mecânicos tem seu potencial. Gosto de jogos arcade, jogar sem pensar. Assim como gosto de jogos de gerenciamento de recursos e de estratégia ultra complexos.
+                </p>
+
+                <p>
+                    Adoro jogar, no entanto hoje não dedico muito tempo ao hobby, prefiro outro uso de tempo. Também parei de gastar com hardware e periféricos. E com software só continuo comprando na Steam e GOG, de forma reduzida. Mas te digo que pegar um jogo e terminar tudo que ele propicia é uma sensação ótima e que tento repetir sempre que posso.
+                </p>
+
+                <p>
+                    Acompanhe meus posts sobre videogames em meu blog, sob o tema “Games” e sob o tema “Jogos” poderá encontrar material sobre jogos de cartas e de tabuleiro.
+                </p>
+            </div>
+
+            <!-- Rodapé do Post / Autor -->
+            <footer class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <img src="avatarsemfundo.png" alt="Felipe Brasil Felicio" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/30 bg-slate-100 dark:bg-slate-700">
+                    <div>
+                        <p class="text-sm font-bold text-slate-900 dark:text-white">Felipe Brasil Felicio</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Professor e Pedagogo • Matinhos - PR</p>
+                    </div>
+                </div>
+
+                <a href="/felipebf.github.io/" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold bg-slate-100 dark:bg-slate-700/60 text-slate-700 dark:text-slate-200 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-600 transition-colors">
+                    <i class="fa-solid fa-house text-xs"></i> Voltar para a página inicial
+                </a>
+            </footer>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 mt-12 border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center text-sm text-slate-500 dark:text-slate-400">
+            © 2026 Felipe Brasil Felicio. Copie mas Cite.
+        </div>
+    </footer>
+
+    <!-- Script Alternador de Tema Dark/Light -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
