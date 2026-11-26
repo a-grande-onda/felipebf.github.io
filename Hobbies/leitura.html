@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitura — Felipe Brasil Felicio</title>
+
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K6NPWZF5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Script para verificar a preferência salva antes da página carregar (evita FOUC) -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                Felipe Brasil Felicio
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <i class="fa-solid fa-arrow-left text-emerald-500"></i>
+                    <span class="hidden sm:inline">Início</span>
+                </a>
+                <button id="theme-toggle" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" title="Alternar tema">
+                    <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-solid fa-sun hidden dark:inline text-lg text-amber-400"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal do Post -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 w-full">
+        <article class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-10 md:p-12 shadow-sm border border-slate-200/80 dark:border-slate-700/60">
+            
+            <!-- Cabeçalho do Artigo -->
+            <header class="border-b border-slate-200 dark:border-slate-700/80 pb-6 mb-8 space-y-4">
+                <div class="flex flex-wrap items-center gap-3 text-xs font-medium">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-800/50">
+                        <i class="fa-solid fa-book-open text-emerald-500"></i> Ensaio / Reflexão
+                    </span>
+                    <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-regular fa-calendar"></i> 26 de Novembro de 2026
+                    </span>
+                    <span class="text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-regular fa-clock"></i> ~5 min de leitura
+                    </span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                    Leitura
+                </h1>
+            </header>
+
+            <!-- Corpo do Texto -->
+            <div class="space-y-6 text-base sm:text-[17px] leading-relaxed text-slate-700 dark:text-slate-300">
+                <p>
+                    Leio desde meus 4 anos de idade. Juntar letras em sílabas e depois sílabas em palavras é a parte mais fácil. No entanto o próximo passo é mais complicado, ler as entrelinhas, conseguir processar informações complexas, controlar em sua mente o nome de 30 (ou mais) personagens diferentes com características distintas dentro de um livro, ser capaz de cruzar dados e fatos, recriar contextos históricos, trazer a informação do livro para um uso prático em sua realidade… estes passos são o que poucos conseguem chegar.
+                </p>
+
+                <p>
+                    Considero que tenho muito que aprender com a leitura, embora tenha lido centenas de títulos em minha vida, ainda estou longe de entender tudo que leio. Alguns temas da área de humanas como filosofia, sociologia, história, geografia dependem de um arcabouço avançado de conhecimentos para conseguir uma compreensão do tema. Não é só o livro, mas tudo que você leu naquela área antes deste livro que compõe sua interpretação do mesmo.
+                </p>
+
+                <p>
+                    Física, Matemática, Química, Economia, e demais conteúdos que envolvam a linguagem matemática para compreensão estão fora do meu alcance. Até sei um pouco de matemática e fiz várias cadeiras em cursos destas áreas, mas muito se perdeu pelo caminho em minha vida e o desuso dos conhecimentos não me qualifica mais para ser um bom leitor das exatas.
+                </p>
+
+                <p>
+                    Nas ciências naturais, minhas graduações em Geologia e em Biologia me auxiliam a compreender certos livros da área. Mas mesmo entre eles, dependendo da dificuldade técnica do texto fico a ver navios. Gosto de representações visuais para livros de ciências naturais, infelizmente isto encarece bastante os livros desta área pois papel couchê e impressão colorida é algo muito caro. Livros custando meio salário mínimo não são raros na área das ciências naturais.
+                </p>
+
+                <p>
+                    Gosto muito de biografias, ah, dessas eu gosto. Independente de muitas serem uma versão romantizada da pessoa biografada, gosto de ler umas mentiras de vez em quando. Lembro que cada palavra é uma interpretação dos fatos pelo autor e nem sempre reflete o real. Mas sim, aprender sobre a vida com base na vida dos outros me interessa bastante.
+                </p>
+
+                <p>
+                    E na ficção, gosto de livros do século XX ou contemporâneos. Clássicos mais antigos não me prendem, talvez encaixar o contexto em uma realidade muito afastada da minha faz que eu não compreenda muito bem livros de épocas vitorianas e muito menos contextos de idade média européia ou de países árabes, isto em uma perspectiva ocidental de leitura.
+                </p>
+
+                <p>
+                    Já peças de teatro, autores clássicos como Shakespeare, tragédias gregas e peças nacionais gosto muito. Para te falar a verdade, eu prefiro ler peças teatrais que vê-las encenadas. Há tempo para parar e refletir. Em uma peça tudo deve terminar em um prazo estabelecido de 2 ou 3 horas, já em um livro eu posso enrolar um “O mercador de Veneza” por vários dias e gotejar aos poucos minha interpretação dos fatos correlacionando com minha realidade.
+                </p>
+
+                <p>
+                    Autores nacionais conheço pouco. Dos que li, Machado de Assis e Jorge Amado se destacam. A nova leva de autores do século XXI eu ainda não tive o interesse necessário para pegar um livro e ler do começo ao fim. Alguns nacionais que tentei me abominam, mas não é culpa do autor e sim do estilo de escrita. A Clarice Lispector eu passo longe, fluxo de pensamento só me deixa mais confuso, me sinto tão idiota quanto quando li a “Crítica da Razão Pura” do Kant para uma cadeira de Epistemologia da Geografia sem nenhuma base a priori.
+                </p>
+
+                <p>
+                    Então o que eu leio e realmente gosto hoje em dia? Gosto de livros textos minuciosamente detalhados e explicando passo a passo um novo conteúdo. Gosto de leitura fácil e entretenimento puro como ficção científica, contos e crônicas. Biografias são um ponto que me interessa bastante, principalmente de cientistas ou figuras ilustres. E livros de não ficção eu adoro ler, mas não os de auto-ajuda, gosto dos científicos e leio eles preferencialmente na língua original que normalmente é o Inglês.
+                </p>
+
+                <p>
+                    Sobre bibliotecas e coleções, já tive mais de 500 títulos de livros e alguns Mangás japoneses. Vendi a maioria, doei, troquei em sebos. Hoje comigo tenho uns 120 títulos porque hoje não tenho mais o espaço de antes após mudanças de casa. Compro livros sempre que possível, e também empresto em bibliotecas, a biblioteca da UFPR fica a cerca de 600 metros de casa e a utilizo sempre. Tenho uma coleção robusta de top100 digitais. Top100 clássicos, top100 ficção científica, top100 contos, top 100 nacionais, top100 fantasia, vencedores do Nebula awards, top 100 melhores do reddit, os 100 melhores de não ficção. Estes são arquivos piratas ou domínio público na língua original do texto (usualmente inglês, espanhol ou francês) e leio no meu Kindle ou no PC via Calibre. Tenho mais de 800 livros em minha biblioteca digital e ocupam menos de 15 GB. Para finalizar, em 2026 lançaram uma biblioteca digital do governo chamada MEC Livros, empreste online, leia, devolva. A leitura pode ser feita com computador, tablet ou celular. Li alguns títulos pelo MEC livros e em uma seleção prévia de títulos do meu interesse na plataforma há pelo menos 200 obras que desejo ler. Desta forma, pela alta disponibilidade de títulos de ficção eu guardo dinheiro e compro livros técnicos um pouco mais caros que o normal, gosto de ter uma biblioteca técnica nível conhecimento universitário. Para entretenimento hoje vou com o MEC livros, Biblioteca UFPR, empréstimos de amigos leitores e meus top piratas na língua original.
+                </p>
+
+                <p>
+                    Não gosto de quantificar números nem metrificar minhas leituras e buscar metas numéricas, no entanto, hoje leio entre 1 e 3 livros ao mês. Usualmente em cerca de 15 dias termino um livro padrão de até 400 páginas. Ler não é meu hobby principal, e não vivo disso, meu trabalho como professor pode ser enriquecido pela leitura mas não sou um crítico de livros, escritor ou um jornalista que depende da leitura para melhorias de escrita. Me divirto lendo e também sempre que preciso de um conhecimento novo prefiro os livros que um curso de videoaulas. Acredito que absorvo percentualmente mais de um texto escrito do que de um vídeo gravado.
+                </p>
+
+                <p>
+                    Dito tudo isto. Como eu encaro a leitura hoje? É uma forma de entretenimento e de se obter informação bem organizada. Não leio para buscar uma forma rebuscada de interação com a leitura, não leio para obter empatia magicamente ao reconhecer emoções humanas de personagens, não domino temas de literatura e toda a história literária mundial, não leio para buscar verdades e não vejo os livros prioritariamente como arte. Além disso, também não sou preparado para leitura de poemas, acho interessantes mas tediosos pois me falta tato. No geral sou bastante pragmático com a leitura, leio para aprender e me divertir, e isto basta.
+                </p>
+            </div>
+
+            <!-- Rodapé do Post / Autor -->
+            <footer class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <img src="avatarsemfundo.png" alt="Felipe Brasil Felicio" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/30 bg-slate-100 dark:bg-slate-700">
+                    <div>
+                        <p class="text-sm font-bold text-slate-900 dark:text-white">Felipe Brasil Felicio</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Professor e Pedagogo • Matinhos - PR</p>
+                    </div>
+                </div>
+
+                <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold bg-slate-100 dark:bg-slate-700/60 text-slate-700 dark:text-slate-200 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-600 transition-colors">
+                    <i class="fa-solid fa-house text-xs"></i> Voltar para a página inicial
+                </a>
+            </footer>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 mt-12 border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center text-sm text-slate-500 dark:text-slate-400">
+            © 2026 Felipe Brasil Felicio. Copie mas Cite.
+        </div>
+    </footer>
+
+    <!-- Script Alternador de Tema Dark/Light -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
